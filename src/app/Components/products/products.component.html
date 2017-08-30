@@ -1,0 +1,25 @@
+<div class="container w3-animate-left">
+  <br>
+  <p class="main-text">หมวดหมู่สินค้า</p>
+        <div class="tooltip buttonAdd">
+          <img class="imageAdd" src="../../../assets/plus.png">
+          <span class="tooltiptext">เพิ่มสินค้า</span>
+        </div>
+        <br><br>
+        <div class="tooltip buttonAdd">
+          <img class="imageAdd" src="../../../assets/plus2.png">
+          <span class="tooltiptext">เพิ่มหมวดหมู่</span>
+        </div>
+  <div class="columns">
+      <div class="column" *ngFor="let category of categorys">
+        <a [routerLink]="['/listproducts',category.name]">
+          <div class="card-image">
+            <p class="text-center">{{category.name}}</p>
+           <figure class="image is-4by3">
+              <img class="category-image" [src]="category.image" alt="Image">
+            </figure>
+          </div>
+        </a>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<a routerLink="/createarticle">
+<div class="tooltip buttonAdd">
+    <img class="imageAdd" src="../../../assets/plus.png">
+    <span class="tooltiptext">เพิ่มบทความ</span>
+  </div>
+</a>
+  <br><br>
+  <div class="tooltip buttonAdd">
+    <img class="imageAdd" src="../../../assets/plus2.png">
+    <span class="tooltiptext">เพิ่มหมวดหมู่</span>
+  </div>
+<div class="container w3-animate-right">
+    <br>
+    <p class="main-text">หมวดหมู่บทความ</p>
+    <div class="columns">
+        <div class="column" *ngFor="let category of contents">
+          <a [routerLink]="['/listarticles',category.name]">
+            <div class="card-image">
+              <p class="text-center">{{category.name}}</p>
+             <figure class="image is-4by3">
+                <img class="category-image" [src]="category.image" alt="Image">
+              </figure>
+            </div>
+          </a>
+        </div>
+      </div>
+  </div>

@@ -1,0 +1,36 @@
+<nav class="nav">
+    <div class="container">
+      <div class="nav-left">
+        <a class="nav-item" routerLink="/">
+          <p class="navText">ระบบจัดการสินค้า</p>
+        </a>
+      </div>
+
+      <label for="menu-toggle" class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <input type="checkbox" id="menu-toggle" class="is-hidden"/>
+      <div class="nav-right nav-menu">
+        <a class="nav-item" routerLink="/products">
+          <p>
+            <i class="fa fa-shopping-cart " aria-hidden="true"></i>
+               สินค้า
+          </p>
+        </a>
+        <a class="nav-item" routerLink="/contents">
+          <p>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            บทความ
+          </p>
+        </a>
+        <a class="nav-item" (click)="logout()">
+          <p>
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+              ออกจากระบบ
+          </p>
+        </a>
+      </div>
+    </div>
+  </nav>

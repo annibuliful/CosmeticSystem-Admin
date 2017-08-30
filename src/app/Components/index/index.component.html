@@ -1,0 +1,30 @@
+<div class="container w3-center w3-animate-top">
+    <div class="columns">
+      <div class="column is-half is-offset-one-quarter">
+          <div class="field">
+            <p class="control has-icons-left has-icons-right">
+              <input class="input" type="email" placeholder="ชื่อผู้ใช้งาน" [(ngModel)]="userName">
+              <span class="icon is-small is-left">
+                <i class="fa fa-user"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control has-icons-left">
+              <input class="input" type="password" placeholder="รหัสผ่าน" [(ngModel)]="password">
+              <span class="icon is-small is-left">
+                <i class="fa fa-lock"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control">
+              <button class="button is-success" (click)="login()">
+                <p>เข้าสู่ระบบ</p>
+              </button>
+              <br>
+              <p style="color:#e74c3c">{{res}}</p>
+        </div>
+      </div>
+    </div>
+  </div>

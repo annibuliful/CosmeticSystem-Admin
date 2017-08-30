@@ -1,0 +1,12 @@
+.container{
+  margin-top: 10%;
+}
+
+p{
+  font-size: 18px;
+}
+
+.is-half{
+  padding-left: 70px;
+  padding-right: 70px;
+}

@@ -1,0 +1,10 @@
+.main-text{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.container{
+  padding-left: 30px;
+  padding-right: 30px;
+}
