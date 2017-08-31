@@ -27,7 +27,8 @@ export class ContentsComponent implements OnInit {
 
   listCategory(){
     this.apollo.watchQuery(
-      {query: listCategoryQuery}
+      {query: listCategoryQuery,
+      fetchPolicy:"network-only"}
     ).subscribe(({data , loading})=>{
       let res: any = data;
       let {listCategorys} = res;
