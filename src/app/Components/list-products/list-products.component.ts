@@ -1,7 +1,7 @@
 import { Subscription } from 'apollo-client';
 import { ActivatedRoute } from '@angular/router';
 import gql from 'graphql-tag';
-import { Apollo } from 'apollo-angular';
+import { Apollo, ApolloQueryObservable } from 'apollo-angular';
 import { Component, OnInit , OnDestroy } from '@angular/core';
 
 const listProductQuery = gql`
@@ -22,7 +22,8 @@ const listProductQuery = gql`
   styleUrls: ['./list-products.component.css']
 })
 export class ListProductsComponent implements OnInit,OnDestroy{
-  sub: Subscription;
+  sub: ApolloQueryObservable<any>;
+
 
   products: any;
 
@@ -36,16 +37,10 @@ export class ListProductsComponent implements OnInit,OnDestroy{
   this.sub =  this.apollo.watchQuery({
       query:listProductQuery ,variables:{
         category: category
-      }}).subscribe(({data , loading})=>{
-        let res: any = data;
-        let {listProducts} = res;
-        this.products = listProducts;
-      })
+      },fetchPolicy: "network-only"})
   }
 
   ngOnDestroy(){
-    this.sub.unsubscribe;
-    this.products = null;
   }
 
   ngOnInit() {
