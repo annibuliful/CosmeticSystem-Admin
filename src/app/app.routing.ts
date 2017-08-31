@@ -1,3 +1,4 @@
+import { EditArticleComponent } from './Components/edit-article/edit-article.component';
 import { CreateArticleComponent } from './Components/create-article/create-article.component';
 import { ListArticlesComponent } from './Components/list-articles/list-articles.component';
 import { ListProductsComponent } from './Components/list-products/list-products.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'contents' , component: ContentsComponent},
   {path:'listproducts/:category' , component: ListProductsComponent},
   {path:'listarticles/:category' , component: ListArticlesComponent},
-  {path: 'createarticle' , component: CreateArticleComponent}
+  {path:'createarticle' , component: CreateArticleComponent},
+  {path:'editarticle/:ID' , component: EditArticleComponent}
 ]
 
 export const routing = RouterModule.forRoot(routes);

@@ -1,6 +1,11 @@
+<div class="tooltip buttonAdd" (click)="removeContent()">
+    <img class="imageAdd" src="../../../assets/delete.png">
+    <span class="tooltiptext">ลบบทความ</span>
+  </div>
 <div class="container">
   <p class="header">เขียนบทความ</p>
   <img [src]="previewImage" style="height:380px ; width: 100%" *ngIf="previewImage != null">
+  <img [src]="oldCoverImage" style="height:380px ; width: 100%" *ngIf="oldCoverImage != null && previewImage == null">
   <div class="columns">
     <div class="column is-three-quarters">
     </div>
@@ -33,7 +38,7 @@
     </div>
   <div [froalaEditor]="froalaConfig" [(froalaModel)]="articleDetail"></div>
   <br><br>
-  <button type="button" (click)="startUpload()">
+  <button type="button" class="add" (click)="startUpload()">
     <p><i class="fa fa-pencil fa-5x" aria-hidden="true"></i></p>
   </button>
 </div>

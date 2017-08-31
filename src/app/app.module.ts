@@ -16,6 +16,7 @@ import { ContentsComponent } from './Components/contents/contents.component';
 import { ListProductsComponent } from './Components/list-products/list-products.component';
 import { ListArticlesComponent } from './Components/list-articles/list-articles.component';
 import { CreateArticleComponent } from './Components/create-article/create-article.component';
+import { EditArticleComponent } from './Components/edit-article/edit-article.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { CreateArticleComponent } from './Components/create-article/create-artic
     ContentsComponent,
     ListProductsComponent,
     ListArticlesComponent,
-    CreateArticleComponent
+    CreateArticleComponent,
+    EditArticleComponent
   ],
   imports: [
     BrowserModule,
