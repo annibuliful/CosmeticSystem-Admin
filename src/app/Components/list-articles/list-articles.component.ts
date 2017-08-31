@@ -8,8 +8,9 @@ const listContentsQuery = gql`
     listContents(category: $category){
       detail
       _id
-      adminName
-      adminImage
+      coverImage
+      category
+      topic
     }
   }
 `
@@ -28,9 +29,11 @@ export class ListArticlesComponent implements OnInit {
   }
 
   listArticles(category: string){
-    this.apollo.watchQuery({query: listContentsQuery , variables:{
-      category: category
-    }}).subscribe(({data , loading})=>{
+    this.apollo.watchQuery({query: listContentsQuery ,
+      variables:{
+        category: category
+      },
+    fetchPolicy:"network-only"}).subscribe(({data , loading})=>{
       let res: any = data;
       let {listContents} = res;
       this.articles = listContents;
