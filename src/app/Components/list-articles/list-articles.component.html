@@ -2,23 +2,25 @@
     <p class="main-text">บทความ</p>
     <div class="columns is-multiline">
       <div class="column is-one-third" *ngFor="let product of articles">
-        <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img [src]="product.coverImage" alt="Image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">{{product.topic}}</p>
+        <a [routerLink]="['/editarticle' , product._id]">
+          <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img [src]="product.coverImage" alt="Image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">{{product.topic}}</p>
+                  </div>
+                </div>
+                <div class="content">
+                  <p class="category">หมวดหมู่ {{product.category}} </p>
                 </div>
               </div>
-              <div class="content">
-                <p class="category">หมวดหมู่ {{product.category}} </p>
-              </div>
             </div>
-          </div>
+          </a>
       </div>
     </div>
   </div>
