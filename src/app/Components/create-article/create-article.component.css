@@ -1,0 +1,48 @@
+.container{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+file-upload {
+  width: 60px;
+}
+
+.file-upload__label {
+  display: block;
+  padding: 1em 2em;
+  color: #000000;
+  border-radius: .4em;
+  transition: background .3s;
+}
+
+.file-upload__input:hover , .file-upload__label:hover{
+  cursor: pointer;
+}
+
+.file-upload__input {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 1;
+    width:40px;
+    height: 100%;
+    opacity: 0;
+}
+button{
+  background-color: white;
+  border: 0px solid white;
+  cursor: pointer;
+}
+
+.category-text{
+  font-size: 20px;
+  font-weight: 400px;
+}
+
+.header{
+  padding-top: 30px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}

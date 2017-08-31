@@ -1,1 +1,39 @@
-<div [froalaEditor]>Hello, Froala!</div>
+<div class="container">
+  <p class="header">เขียนบทความ</p>
+  <img [src]="previewImage" style="height:380px ; width: 100%" *ngIf="previewImage != null">
+  <div class="columns">
+    <div class="column is-three-quarters">
+    </div>
+    <div class="column">
+        <div class="file-upload">
+            <label for="upload" class="file-upload__label"><i class="fa fa-camera-retro fa-3x" aria-hidden="true"></i></label>
+            <input ngFileSelect (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput"  id="upload" class="file-upload__input" type="file" name="file-upload" (change)="readUrl($event)">
+        </div>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column is-one-quarter">
+      <p class="category-text">หมวดหมู่</p>
+    </div>
+    <div class="column is-one-quarter">
+        <div class="select">
+            <select [(ngModel)]="articleCategory">
+                <option *ngFor="let name of categorys"  [ngValue]="name.name">{{name.name}}</option>
+            </select>
+          </div>
+    </div>
+  </div>
+  <div class="columns">
+      <div class="column is-one-quarter">
+        <p class="category-text">ชื่อบทความ</p>
+      </div>
+      <div class="column ">
+          <input class="input" type="text" [(ngModel)]="articleTopic">
+      </div>
+    </div>
+  <div [froalaEditor]="froalaConfig" [(froalaModel)]="articleDetail">Hello, Froala!</div>
+  <br><br>
+  <button type="button" (click)="startUpload()">
+    <p><i class="fa fa-pencil fa-5x" aria-hidden="true"></i></p>
+  </button>
+</div>
