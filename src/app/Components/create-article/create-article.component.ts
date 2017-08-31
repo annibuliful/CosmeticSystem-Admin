@@ -104,6 +104,7 @@ export class CreateArticleComponent implements OnInit {
           data: { _id: addContent._id },
         };
         this.uploadInput.emit(event);
+        this.route.navigate(['/contents']);
       }
     })
   }
