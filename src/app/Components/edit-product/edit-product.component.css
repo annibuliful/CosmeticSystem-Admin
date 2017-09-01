@@ -1,0 +1,53 @@
+.product-detail{
+  font-size: 18px;
+}
+
+.container{
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+file-upload {
+  width: 60px;
+}
+
+.file-upload__label {
+  display: block;
+  padding: 1em 2em;
+  color: #000000;
+  border-radius: .4em;
+  transition: background .3s;
+}
+
+.file-upload__input:hover , .file-upload__label:hover{
+  cursor: pointer;
+}
+
+.file-upload__input {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 1;
+    width:40px;
+    height: 100%;
+    opacity: 0;
+}
+
+.add{
+  cursor: pointer;
+}
+.detail{
+  margin-left: 20px
+}
+
+.buttonAdd {
+  cursor: pointer;
+  margin-top: 10px;
+  position: fixed;
+  left: auto;
+  right: 2%;
+  z-index: 3;
+  transition: all 0.3s ease-out;
+}

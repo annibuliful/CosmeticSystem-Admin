@@ -151,8 +151,6 @@ export class EditArticleComponent implements OnInit {
         category: this.articleCategory,
         topic: this.articleTopic
       }}).subscribe(({data})=>{
-        let res: any = data;
-        let {addContent} = res;
           this.route.navigate(['/contents']);
       })
     }

@@ -1,3 +1,71 @@
-<p>
-  edit-product works!
-</p>
+<div class="tooltip buttonAdd" (click)="removeProduct()">
+  <img class="imageAdd" src="../../../assets/delete.png">
+  <span class="tooltiptext">ลบบทความ</span>
+</div>
+<div class="container">
+  <div class="columns ">
+    <div class="column is-half">
+      <img [src]="previewImage" style="height:380px ; width: 100%" *ngIf="previewImage != null">
+      <img [src]="oldCoverImage" style="height:380px ; width: 90%" *ngIf="oldCoverImage != null && previewImage == null">
+      <div class="file-upload">
+        <label for="upload" class="file-upload__label">
+          <i class="fa fa-camera-retro fa-3x" aria-hidden="true"></i>
+        </label>
+        <input ngFileSelect (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" id="upload" class="file-upload__input"
+          type="file" name="file-upload" (change)="readUrl($event)">
+      </div>
+
+    </div>
+    <div class="column">
+      <div class="columns">
+        <div class="column is-one-quarter">
+          <p class="product-detail is-one-quarter">หมวดหมู่</p>
+        </div>
+        <div class="column is-one-quarter">
+          <div class="select">
+            <select [(ngModel)]="category">
+                          <option *ngFor="let name of categorys"  [ngValue]="name.name">{{name.name}}</option>
+                      </select>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-one-quarter">
+          <p class="product-detail ">ชื่อสินค้า</p>
+        </div>
+        <div class="column">
+          <input class="input" type="text" [(ngModel)]="name" placeholder="ชื่อสินค้า">
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-one-quarter">
+          <p class="product-detail ">จำนวนสินค้า</p>
+        </div>
+        <div class="column is-one-quarter">
+          <input class="input" type="number" [(ngModel)]="price" placeholder="จำนวนสินค้า">
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-one-quarter">
+          <p class="product-detail ">ราคาสินค้า</p>
+        </div>
+        <div class="column is-one-quarter">
+          <input class="input" type="number" [(ngModel)]="number" placeholder="ราคาสินค้า">
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-one-quarter">
+          <p class="product-detail ">รายละเอียดสินค้า</p>
+        </div>
+        <div class="column">
+          <textarea class="textarea" [(ngModel)]="description" placeholder="รายละเอียดสินค้า"></textarea>
+        </div>
+      </div>
+      <div class="columns add" (click)="submitProduct()">
+        <div class="column">
+          <img src="../../../assets/addProduct.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

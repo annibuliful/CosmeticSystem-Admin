@@ -2,6 +2,7 @@
   <p class="main-text">สินค้า</p>
   <div class="columns is-multiline">
     <div class="column is-one-third" *ngFor="let product of sub | async | select: 'listProducts'">
+      <a [routerLink]="['/editproduct' , product._id]">
       <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
@@ -22,6 +23,7 @@
             </div>
           </div>
         </div>
+      </a>
     </div>
   </div>
 </div>

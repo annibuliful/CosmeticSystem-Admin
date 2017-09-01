@@ -64,6 +64,7 @@ export class CreateProductComponent implements OnInit {
       this.files[index] = output.file;
     }
   }
+
   submitProduct(){
     this.apollo.mutate({mutation: addProductMutation , variables:{
       name: this.name ,
