@@ -17,6 +17,8 @@ import { ListProductsComponent } from './Components/list-products/list-products.
 import { ListArticlesComponent } from './Components/list-articles/list-articles.component';
 import { CreateArticleComponent } from './Components/create-article/create-article.component';
 import { EditArticleComponent } from './Components/edit-article/edit-article.component';
+import { CreateProductComponent } from './Components/create-product/create-product.component';
+import { EditProductComponent } from './Components/edit-product/edit-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,9 @@ import { EditArticleComponent } from './Components/edit-article/edit-article.com
     ListProductsComponent,
     ListArticlesComponent,
     CreateArticleComponent,
-    EditArticleComponent
+    EditArticleComponent,
+    CreateProductComponent,
+    EditProductComponent
   ],
   imports: [
     BrowserModule,
