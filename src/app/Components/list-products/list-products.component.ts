@@ -8,7 +8,7 @@ const listProductQuery = gql`
   query list($category:String!){
     listProducts(category: $category){
       name
-      image
+      coverImage
       price
       _id
       description
