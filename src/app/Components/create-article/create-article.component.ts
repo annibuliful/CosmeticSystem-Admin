@@ -80,7 +80,6 @@ export class CreateArticleComponent implements OnInit {
     if (output.type === 'allAddedToQueue') {
     } else if (output.type === 'addedToQueue'  && typeof output.file !== 'undefined') {
       this.files[0] =output.file;
-      console.log(this.files)
     } else if (output.type === 'uploading' && typeof output.file !== 'undefined') {
       const index = this.files.findIndex(file => typeof output.file !== 'undefined' && file.id === output.file.id);
       this.files[index] = output.file;

@@ -19,6 +19,8 @@ import { CreateArticleComponent } from './Components/create-article/create-artic
 import { EditArticleComponent } from './Components/edit-article/edit-article.component';
 import { CreateProductComponent } from './Components/create-product/create-product.component';
 import { EditProductComponent } from './Components/edit-product/edit-product.component';
+import { CreateCategoryComponent } from './Components/create-category/create-category.component';
+import { ListCategorysComponent } from './Components/list-categorys/list-categorys.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,9 @@ import { EditProductComponent } from './Components/edit-product/edit-product.com
     CreateArticleComponent,
     EditArticleComponent,
     CreateProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    CreateCategoryComponent,
+    ListCategorysComponent
   ],
   imports: [
     BrowserModule,

@@ -6,14 +6,16 @@
     </div>
   </a>
     <br><br>
+    <a routerLink="/addcategory">
     <div class="tooltip buttonAdd">
       <img class="imageAdd" src="../../../assets/plus2.png">
       <span class="tooltiptext">เพิ่มหมวดหมู่</span>
     </div>
+    </a>
   <div class="container w3-animate-right">
       <p class="main-text">หมวดหมู่สินค้า</p>
-      <div class="columns">
-          <div class="column" *ngFor="let category of categorys">
+      <div class="columns is-multiline">
+          <div class="column is-one-third" *ngFor="let category of categorys">
             <a [routerLink]="['/listproducts',category.name]">
               <div class="card-image">
                 <p class="text-center">{{category.name}}</p>

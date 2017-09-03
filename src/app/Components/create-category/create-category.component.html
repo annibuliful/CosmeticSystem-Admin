@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="columns">
+    <div class="column">
+      <img [src]="previewImage" *ngIf="previewImage != null">
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      <div class="file-upload">
+        <label for="upload" class="file-upload__label"><i class="fa fa-camera-retro fa-3x" aria-hidden="true"></i></label>
+        <input ngFileSelect (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" id="upload" class="file-upload__input"
+          type="file" name="file-upload" (change)="readUrl($event)">
+      </div>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column is-one-quarter">
+      <p class="name-category">ชื่อหมวดหมู่</p>
+    </div>
+    <div class="column is-half">
+      <input class="input" type="text" [(ngModel)]="category">
+    </div>
+  </div>
+  <a class="button is-primary" (click)="addCategory()">เพิ่มหมวดหมู่</a>
+</div>
